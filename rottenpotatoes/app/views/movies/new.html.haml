@@ -1,6 +1,8 @@
 %h2 Create New Movie
 
 = form_tag movies_path do
+  = label :movie, :title, 'Director'
+  = text_field :movie, 'director'
 
   = label :movie, :title, 'Title'
   = text_field :movie, 'title'
@@ -11,4 +13,4 @@
   = label :movie, :release_date, 'Released On'
   = date_select :movie, :release_date
 
-  = submit_tag 'Save Changes', :class => 'btn btn-primary'
+  = submit_tag 'Save Changes'

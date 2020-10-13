@@ -1,9 +1,11 @@
 -# edit.html.haml using partial
 
+
 %h2 Edit Existing Movie
 
 = form_tag movie_path(@movie), :method => :put do
-
+  = label :movie, :director, 'Director'
+  = text_field :movie, 'director'
   = label :movie, :title, 'Title'
   = text_field :movie, 'title'
 
@@ -12,5 +14,6 @@
 
   = label :movie, :release_date, 'Released On'
   = date_select :movie, :release_date
+  
+  = submit_tag 'Update Movie Info'
 
-  = submit_tag 'Update Movie Info', :class => 'btn btn-primary'
